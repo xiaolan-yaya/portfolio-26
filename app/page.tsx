@@ -1,27 +1,20 @@
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/content/projects";
-
-const stack = ["Figma", "Claude", "Cursor", "Vercel", "GitHub"];
+import { site } from "@/site.config";
 
 export default function Home() {
   return (
     <>
       <section className="hero">
-        <h1>Hi, I'm Yaya.</h1>
-        <p>
-          Interaction design student at the University of Washington, working across
-          UX research, product design and brand identity.
-        </p>
+        <h1>welcome to<br /><em>yaya</em>’s portfolio</h1>
+        <p className="note">{site.name} · {site.email}</p>
+        <p className="note">(scroll to see my works!)</p>
       </section>
 
-      <h2 id="work" className="section-title">Selected work</h2>
+      <h2 id="projects" className="section-title">featured projects</h2>
       <div className="grid">
         {projects.map((p) => <ProjectCard key={p.slug} project={p} />)}
-      </div>
-
-      <h2 className="section-title">My stack</h2>
-      <div className="stack">
-        {stack.map((s) => <span key={s}>{s}</span>)}
+        <div className="coming"><p>more projects coming soon…</p></div>
       </div>
     </>
   );

@@ -12,20 +12,20 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "discord-notifications",
+    title: "Discord Notification Redesign",
+    summary: "Helps non-technical Discord users catch up on important updates without feeling overwhelmed.",
+    role: "UX Designer",
+    year: "2025",
+    tags: ["UX/UI", "Product Strategy", "User Research", "Prototyping"],
+  },
+  {
     slug: "pill-buddies",
     title: "Pill Buddies",
     summary: "Redesigning the add/edit medication flow for a medication-tracking app.",
     role: "UX/UI Designer",
     year: "2026",
     tags: ["Mobile", "UX", "Handoff"],
-  },
-  {
-    slug: "discord-notifications",
-    title: "Discord Notification Inbox",
-    summary: "Rethinking the notification inbox and whitelist so people see what matters.",
-    role: "UX Designer",
-    year: "2026",
-    tags: ["Product", "Research"],
   },
   {
     slug: "netflix-gen-z",
