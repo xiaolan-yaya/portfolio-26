@@ -6,9 +6,9 @@
   --accent: #ff3d13;    /* small notes, links like (scroll to see my works!) */
   --line: rgba(0, 0, 0, 0.08);
 
-  /* Adobe Fonts family names first; Helvetica Neue / Inter as fallbacks */
-  --font-display: "neue-haas-grotesk-display", "Neue Haas Grotesk Display Pro", "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
-  --font-text: "neue-haas-grotesk-text", "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+  /* Inter Tight (Google Fonts), close to Neue Haas Grotesk */
+  --font-display: "Inter Tight Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-text: "Inter Tight Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --max: 1200px;
   --radius: 14px;

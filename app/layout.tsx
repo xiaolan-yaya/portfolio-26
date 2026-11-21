@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { site } from "@/site.config";
+// Inter Tight (Google Fonts, free for web use), served from this site
+import "@fontsource-variable/inter-tight";
+import "@fontsource-variable/inter-tight/wght-italic.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,10 +15,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        {site.adobeFontsKitId ? (
-          // React hoists this into <head> automatically
-          <link rel="stylesheet" href={`https://use.typekit.net/${site.adobeFontsKitId}.css`} precedence="default" />
-        ) : null}
         <Nav />
         <main className="container">{children}</main>
         <Footer />
