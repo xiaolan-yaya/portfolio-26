@@ -41,6 +41,17 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 300; line-height: 1.
 .hero { min-height: 78vh; display: flex; flex-direction: column; justify-content: center; text-align: center; }
 .hero h1 { font-size: clamp(3.5rem, 11vw, 10.5rem); font-weight: 200; letter-spacing: -0.02em; }
 .hero h1 em { font-family: var(--font-text); font-style: italic; font-weight: 400; }
+/* hand-made graphics around the title (positions match the Figma hero) */
+.hero-title { position: relative; display: inline-block; align-self: center; }
+.hero-title h1 { position: relative; z-index: 1; }
+.deco { position: absolute; pointer-events: none; user-select: none; }
+.deco-stamp { left: -11%; top: 16%; width: 25%; z-index: 0; animation: spin 40s linear infinite; }
+.deco-blob { left: 72%; top: 58%; width: 24%; z-index: 0; animation: float 6s ease-in-out infinite; }
+.deco-sparkle { left: 88%; top: 24%; width: 11%; z-index: 2; animation: twinkle 3.5s ease-in-out infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(4deg); } }
+@keyframes twinkle { 0%, 100% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.12) rotate(12deg); } }
+@media (prefers-reduced-motion: reduce) { .deco { animation: none; } }
 .hero .note { margin-top: 48px; font-size: 16px; }
 
 .section-title { font-size: 25px; font-weight: 500; margin: 80px 0 24px; }
@@ -73,3 +84,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 300; line-height: 1.
 .footer { margin-top: 120px; padding: 48px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 .footer .links { display: flex; gap: 20px; flex-wrap: wrap; }
 .footer .bye { font-size: 16px; }
+
+@media (max-width: 600px) {
+  .container { padding: 0 18px; }
+  .nav .links { gap: 14px; font-size: 14px; }
+  .logo { font-size: 17px; }
+  .grid { grid-template-columns: 1fr; }
+}
