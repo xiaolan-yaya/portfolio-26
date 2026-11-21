@@ -1,4 +1,16 @@
-/* Colors and fonts carried over from yayazheng.framer.website */
+/* Plus Jakarta Sans (SIL Open Font License, see public/fonts/OFL.txt) */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/PlusJakartaSans-Variable.woff2") format("woff2");
+  font-weight: 200 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/PlusJakartaSans-Italic-Variable.woff2") format("woff2");
+  font-weight: 200 800; font-style: italic; font-display: swap;
+}
+
+/* Colors carried over from yayazheng.framer.website */
 :root {
   --bg: #ffffff;
   --ink: #000000;
@@ -6,9 +18,9 @@
   --accent: #ff3d13;    /* small notes, links like (scroll to see my works!) */
   --line: rgba(0, 0, 0, 0.08);
 
-  /* Inter Tight (Google Fonts), close to Neue Haas Grotesk */
-  --font-display: "Inter Tight Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-text: "Inter Tight Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Plus Jakarta Sans everywhere */
+  --font-display: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-text: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --max: 1200px;
   --radius: 14px;
