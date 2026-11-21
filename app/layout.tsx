@@ -12,12 +12,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        {site.adobeFontsKitId && (
-          <link rel="stylesheet" href={`https://use.typekit.net/${site.adobeFontsKitId}.css`} />
-        )}
-      </head>
       <body>
+        {site.adobeFontsKitId ? (
+          // React hoists this into <head> automatically
+          <link rel="stylesheet" href={`https://use.typekit.net/${site.adobeFontsKitId}.css`} precedence="default" />
+        ) : null}
         <Nav />
         <main className="container">{children}</main>
         <Footer />
